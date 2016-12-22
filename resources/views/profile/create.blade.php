@@ -65,7 +65,7 @@
 
             <div>
 
-                {{  Form::date('birthdate')}}
+                     {{ Form::date('birthdate', \Carbon\Carbon::now())}} 
 
             </div>
 

@@ -44,3 +44,6 @@ Route::get('my-profile', ['as' => 'my-profile', 'uses' => 'ProfileController@myP
 Route::resource('profile', 'ProfileController');
 
 Route::resource('user', 'UserController');
+
+Route::get('settings', 'SettingsController@edit');
+Route::post('settings', ['as' => 'userUpdate', 'uses' => 'SettingsController@update']);

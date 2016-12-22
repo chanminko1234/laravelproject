@@ -13,12 +13,12 @@
         <ol class='breadcrumb'>
             <li><a href='/'>Home</a></li>
             <li><a href='/profile'>Profiles</a></li>
-            <li><a href='/profile/create</a>Create</li>
+            <li><a href='/profile/create'>Create</a></li>
         </ol>
     @else
         <ol class='breadcrumb'>
             <li><a href='/'>Home</a></li>
-            <li><a href='/profile/create</a>Create</li>
+            <li><a href='/profile/create'>Create</a></li>
         </ol>
 
     @endif
