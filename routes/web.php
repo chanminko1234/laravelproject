@@ -47,3 +47,5 @@ Route::resource('user', 'UserController');
 
 Route::get('settings', 'SettingsController@edit');
 Route::post('settings', ['as' => 'userUpdate', 'uses' => 'SettingsController@update']);
+
+Route::resource('marketing-image', 'MarketingImageController');
