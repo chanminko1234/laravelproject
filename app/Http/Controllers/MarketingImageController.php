@@ -21,7 +21,8 @@ class MarketingImageController extends Controller
     public function index()
     {
         $thumbnailPath = $this->thumbnailPath;
-        $marketingImages = MarketingImage::paginate(10);
+       $marketingImages = MarketingImage::orderBy('image_weight', 'asc')
+        ->paginate(10);
         return view('marketing-image.index', compact('marketingImages', 'thumbnailPath'));
     }
     /**
@@ -46,7 +47,8 @@ class MarketingImageController extends Controller
             'image_name'        => $request->get('image_name'),
             'image_extension'   => $request->file('image')->getClientOriginalExtension(),
             'is_active'         => $request->get('is_active'),
-            'is_featured'       => $request->get('is_featured')
+            'is_featured'       => $request->get('is_featured'),
+            'image_weight'  => $request->get('image_weight')
         ]);
         // save model
         $marketingImage->save();
@@ -140,5 +142,6 @@ class MarketingImageController extends Controller
     {
         $marketingImage->is_active = $request->get('is_active');
         $marketingImage->is_featured = $request->get('is_featured');
+        $marketingImage->image_weight = $request->get('image_weight');
     }
 }

@@ -49,3 +49,7 @@ Route::get('settings', 'SettingsController@edit');
 Route::post('settings', ['as' => 'userUpdate', 'uses' => 'SettingsController@update']);
 
 Route::resource('marketing-image', 'MarketingImageController');
+
+// Api Routes
+Route::get('api/widget-data', 'ApiController@widgetData');
+Route::get('api/marketing-image-data', 'ApiController@marketingImageData');

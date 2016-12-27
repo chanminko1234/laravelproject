@@ -11,6 +11,9 @@
 </ol>
 
 <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+<example></example>
+@include('pages.slider')
+<br><br>
 <!-- Main jumbotron for a primary marketing message or call to action -->
 
 <div class="jumbotron">
