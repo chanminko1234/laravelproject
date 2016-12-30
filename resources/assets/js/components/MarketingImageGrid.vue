@@ -31,7 +31,7 @@
                                  <img v-bind:src="'/imgs/marketing/thumbnails/thumb-' + row.Name + '.' + row.Ext "></a>
                             </td>
                             <td>
-                                <a v-bind:href="'/widget/' + row.Id + '-' + row.Slug "> {{ row.Name }}</a>
+                                <a v-bind:href="'/marketing-image/' + row.Id + '-' + row.Slug "> {{ row.Name }}</a>
                             </td>
                             <td>
                                 {{ row.Weight }}
@@ -46,11 +46,11 @@
                             <td>
                                 {{ row.Created }}
                             </td>
-                            <td ><a v-bind:href="'/widget/' + row.Id + '/edit'">
-                                <button type="button" class="btn btn-default">
+                             <td ><a v-bind:href="'/marketing-image/' + row.Id + '/edit'">
+                                 <button type="button" class="btn btn-default">
                                     Edit
-                                </button>
-                            </a>
+                                 </button>
+                                 </a>
                             </td>
                         </tr>
                         </tbody>

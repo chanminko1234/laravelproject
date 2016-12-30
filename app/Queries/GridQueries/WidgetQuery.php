@@ -3,8 +3,9 @@
 namespace App\Queries\GridQueries;
 use DB;
 use Illuminate\Http\Request;
+use App\Queries\GridQueries\Contracts\DataQuery;
 
-class WidgetQuery
+class WidgetQuery implements DataQuery
 {
 
    public function data($column, $direction)
